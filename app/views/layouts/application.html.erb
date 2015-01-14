@@ -8,7 +8,13 @@
 </head>
 <body>
 
-<strong>Welcome <%= current_user.first_name if current_user %></strong>
+<% if current_user %>
+  You are signed in as <%= current_user.email %> | <%= link_to "Logout", logout_path %>
+<% else %>
+  <%= link_to "Login", logout_path %> | <%= link_to "Signup", signup_path %>
+<% end %>
+
+
 
 <h1>Saladly</h1>
 The Salad Makers Friend!

@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     
     if user && user.authenticate(params[:user][:password])
       session[:user_id] = user.id  #adds cookie
-      redirect_to ingredients_path
+      redirect_to employees_path
     else
       render :new
     end
