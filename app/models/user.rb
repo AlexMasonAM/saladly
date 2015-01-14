@@ -9,5 +9,6 @@ class User
 
   has_secure_password #tells rails to have a password_digest
 
+  validates :email, uniqueness: true 
   validates :password, confirmation: true #standard for WDI not in real world
 end

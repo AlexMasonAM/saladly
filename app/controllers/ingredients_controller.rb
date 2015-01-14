@@ -5,6 +5,7 @@ class IngredientsController < ApplicationController
   end
 
   def show
+    current_user
     @ingredient = Ingredient.find(params[:id])
   end
 
