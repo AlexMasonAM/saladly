@@ -1,0 +1,9 @@
+<%= form_for @ingredient do |f| %>
+
+  Name: <%= f.text_field :name %><br>
+  Initial Quantity (float): <%= f.number_field :quantity, :step => 0.01 %><br>
+  Units (plural): <%= f.text_field :units %><br>
+  Unit Price (cents): <%= f.number_field :price_per_unit %><br>
+  <%= f.submit 'Save Changes' %>
+  
+<% end %>
